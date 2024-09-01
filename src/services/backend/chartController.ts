@@ -2,12 +2,12 @@
 /* eslint-disable */
 import { request } from '@umijs/max';
 
-/** addChart POST /api/chart/add */
+/** addChart POST /chart/add */
 export async function addChartUsingPost(
   body: API.ChartAddRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseLong_>('/api/chart/add', {
+  return request<API.BaseResponseLong_>('/chart/add', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -17,12 +17,12 @@ export async function addChartUsingPost(
   });
 }
 
-/** deleteChart POST /api/chart/delete */
+/** deleteChart POST /chart/delete */
 export async function deleteChartUsingPost(
   body: API.DeleteRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseBoolean_>('/api/chart/delete', {
+  return request<API.BaseResponseBoolean_>('/chart/delete', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -32,12 +32,12 @@ export async function deleteChartUsingPost(
   });
 }
 
-/** editChart POST /api/chart/edit */
+/** editChart POST /chart/edit */
 export async function editChartUsingPost(
   body: API.ChartEditRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseBoolean_>('/api/chart/edit', {
+  return request<API.BaseResponseBoolean_>('/chart/edit', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -47,13 +47,13 @@ export async function editChartUsingPost(
   });
 }
 
-/** getChartVOById GET /api/chart/get */
+/** getChartVOById GET /chart/get */
 export async function getChartVoByIdUsingGet(
   // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
   params: API.getChartVOByIdUsingGETParams,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseChart_>('/api/chart/get', {
+  return request<API.BaseResponseChart_>('/chart/get', {
     method: 'GET',
     params: {
       ...params,
@@ -62,12 +62,12 @@ export async function getChartVoByIdUsingGet(
   });
 }
 
-/** listChartVOByPage POST /api/chart/list/page */
+/** listChartVOByPage POST /chart/list/page */
 export async function listChartVoByPageUsingPost(
   body: API.ChartQueryRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponsePageChart_>('/api/chart/list/page', {
+  return request<API.BaseResponsePageChart_>('/chart/list/page', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -77,12 +77,12 @@ export async function listChartVoByPageUsingPost(
   });
 }
 
-/** listMyPostVOByPage POST /api/chart/my/list/page */
+/** listMyPostVOByPage POST /chart/my/list/page */
 export async function listMyPostVoByPageUsingPost(
   body: API.ChartQueryRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponsePageChart_>('/api/chart/my/list/page', {
+  return request<API.BaseResponsePageChart_>('/chart/my/list/page', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -92,12 +92,12 @@ export async function listMyPostVoByPageUsingPost(
   });
 }
 
-/** updateChart POST /api/chart/update */
+/** updateChart POST /chart/update */
 export async function updateChartUsingPost(
   body: API.ChartUpdateRequest,
   options?: { [key: string]: any },
 ) {
-  return request<API.BaseResponseBoolean_>('/api/chart/update', {
+  return request<API.BaseResponseBoolean_>('/chart/update', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

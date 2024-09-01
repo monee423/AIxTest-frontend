@@ -11,6 +11,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseDefectResponse_ = {
+    code?: number;
+    data?: DefectResponse;
+    message?: string;
+  };
+
   type BaseResponseLoginUserVO_ = {
     code?: number;
     data?: LoginUserVO;
@@ -41,6 +47,12 @@ declare namespace API {
     message?: string;
   };
 
+  type BaseResponseString_ = {
+    code?: number;
+    data?: string;
+    message?: string;
+  };
+
   type BaseResponseUser_ = {
     code?: number;
     data?: User;
@@ -55,6 +67,7 @@ declare namespace API {
 
   type Chart = {
     chartData?: string;
+    chartName?: string;
     chartType?: string;
     createTime?: string;
     genChart?: string;
@@ -68,18 +81,21 @@ declare namespace API {
 
   type ChartAddRequest = {
     chartData?: string;
+    chartName?: string;
     chartType?: string;
     goal?: string;
   };
 
   type ChartEditRequest = {
     chartData?: string;
+    chartName?: string;
     chartType?: string;
     goal?: string;
     id?: number;
   };
 
   type ChartQueryRequest = {
+    chartName?: string;
     chartType?: string;
     current?: number;
     id?: number;
@@ -91,6 +107,7 @@ declare namespace API {
 
   type ChartUpdateRequest = {
     chartData?: string;
+    chartName?: string;
     chartType?: string;
     createTime?: string;
     genChart?: string;
@@ -100,6 +117,23 @@ declare namespace API {
     isDelete?: number;
     updateTime?: string;
     userId?: number;
+  };
+
+  type chatWithAiUsingPOSTParams = {
+    chartData?: string;
+    chartName?: string;
+    chartType?: string;
+    current?: number;
+    dataDesc?: string;
+    goal?: string;
+    pageSize?: number;
+    sortField?: string;
+    sortOrder?: string;
+  };
+
+  type DefectResponse = {
+    genChart?: string;
+    genResult?: string;
   };
 
   type DeleteRequest = {
@@ -173,6 +207,10 @@ declare namespace API {
     searchCount?: boolean;
     size?: number;
     total?: number;
+  };
+
+  type uploadFileUsingPOSTParams = {
+    biz?: string;
   };
 
   type User = {

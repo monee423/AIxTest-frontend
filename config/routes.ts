@@ -8,6 +8,13 @@ export default [
     ],
   },
   { path: '/welcome', icon: 'smile', component: './Welcome', name: '欢迎页' },
+  { path: '/', icon: 'smile', redirect: '/welcome' },
+  {
+    name: '缺陷分析',
+    path: '/add',
+    icon: 'barChart',
+    component: './AddChart',
+  },
   {
     path: '/admin',
     icon: 'crown',
